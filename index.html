@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Hola-Hi!</title>
+
+  <link rel="stylesheet" href="/css/main.css" />
+
+</head>
+
+<body>
+
+<header>
+   
+<nav>
+   <div class="logo"><h1>Hola-Hi!</h1></div>
+   <div class="menu">
+       <a href="#">Home</a>
+       <a href="#">About Us</a>
+       <a href="#">Contact</a>
+       
+   </div>
+</nav>
+</header>
+
+<main>
+  <div id="v1">
+  <div id="videos">
+    <video id="remoteVideo" style="width: 720px;" autoplay playsinline></video>
+    <br>
+    <video id="localVideo" style="width: 240px;" autoplay muted playsinline></video>
+
+  </div>
+
+  <p id="localText"></p>
+  <p id="remoteText"></p>
+
+  <div class="container">
+
+    <div class="app">
+
+        <div class="input-single">
+              <textarea id="note-textarea" placeholder=" voice recognition." rows="6" style="display:none"></textarea>
+        </div>
+        <div>
+          <label> <small>Input language:</small>
+          <input type="text" value = "hi" id="input_language" style="width: 20px" />
+        </label>
+        <br>
+          <label> <small>Output language:</small>
+            <input type="text" value="en" id="output_language" style="width: 20px" />
+          </label>
+          <br>
+          <label> <small>Voice of:</small>
+            <input type="text" value="-1" id="voice_number" style="width: 20px" />
+          </label>
+          <br>
+        <button id="start-record-btn" title="Start Recording">Start Recognition</button>
+        <button id="pause-record-btn" title="Pause Recording">Pause Recognition</button>
+        <!-- <button id="save-note-btn" title="Save Note">Save Note</button> -->
+        <p id="recording-instructions">Press the <strong>Start Recognition</strong> button and allow access.</p>
+
+
+    </div>
+
+</div>
+</div>
+</main>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+  <!-- This file is automatically added/served when running "node index.js". -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="js/main.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+</body>
+
+</html>
